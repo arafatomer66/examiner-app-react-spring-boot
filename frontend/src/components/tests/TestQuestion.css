@@ -1,0 +1,29 @@
+.test-question-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+  }
+  
+  /* Media Query for Small Laptop Screens (3 columns) */
+  @media screen and (max-width: 1024px) {
+    .test-question-grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  
+  /* Media Query for Tablets (2 columns with padding) */
+  @media screen and (max-width: 768px) {
+    .test-question-grid {
+      grid-template-columns: repeat(4, 1fr);
+      padding: 10px;
+    }
+  }
+  
+  /* Media Query for Mobile (1 column with padding) */
+  @media screen and (max-width: 480px) {
+    .test-question-grid {
+      grid-template-columns: 3fr;
+      padding: 10px;
+    }
+  }

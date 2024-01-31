@@ -1,0 +1,29 @@
+
+/* Base styles for the grid */
+.subject-flex {
+  display: flex;
+  justify-content: center;
+}
+
+/* Media Query for Small Laptop Screens (3 columns) */
+@media screen and (max-width: 1024px) {
+  .subject-flex {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Media Query for Tablets (2 columns with padding) */
+@media screen and (max-width: 768px) {
+  .subject-flex {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+  }
+}
+
+/* Media Query for Mobile (1 column with padding) */
+@media screen and (max-width: 480px) {
+  .subject-flex {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+}

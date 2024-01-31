@@ -1,0 +1,4 @@
+.ant-drawer-body{
+    overflow: hidden;
+    height: fit-content !important;
+}

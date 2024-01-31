@@ -1,0 +1,114 @@
+/* Wrapper and background */
+:root{
+  --color-one: #001529;
+  --color-two: #8E4FEC;
+  --background-color: hsla(209, 100%, 8%, 1);
+}
+
+.bg-gradient {
+  background: var(--background-color);
+
+  background: linear-gradient(45deg, var(--color-one) 5%, var(--color-two) 100%);
+
+  background: -moz-linear-gradient(45deg, var(--color-one) 5%, hsla(264, 81%, 62%, 1) 100%);
+
+  background: -webkit-linear-gradient(45deg, var(--color-one) 5%, hsla(264, 81%, 62%, 1) 100%);
+
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="var(--color-one)", endColorstr="var(--color-two)", GradientType=1);
+  color: white !important;
+  border-radius: 20px;
+}
+
+.wrapper {
+  margin: 5vh 5vw;
+}
+
+.wrapper-padding {
+  padding: 5vh 5vw;
+}
+
+.color-white {
+  color: white !important;
+}
+
+/* Base styles for the grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+/* Media Query for Small Laptop Screens (3 columns) */
+@media screen and (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Media Query for Tablets (2 columns with padding) */
+@media screen and (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+  }
+}
+
+/* Media Query for Mobile (1 column with padding) */
+@media screen and (max-width: 480px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+}
+
+/* Style for the cards */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  color: black;
+  padding: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s, color 0.2s;
+  border: 1px solid  #6A41BB;
+  position: relative;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Hover effect for the cards */
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  background-color: #f9e1f9;
+}
+
+/* Group hover effect - Move nearby cards */
+.card:hover~.card {
+  transform: translateX(10px) translateY(-10px);
+  transition: transform 0.2s;
+}
+
+/* Image animation */
+.card .card-image img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.2s;
+}
+
+.card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+/* Text animation */
+.card .card-title {
+  font-size: 20px;
+  transition: transform 0.2s;
+}
+
+.card:hover .card-title {
+  transform: translateY(-10px);
+}

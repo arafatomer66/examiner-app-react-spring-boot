@@ -1,0 +1,1114 @@
+{
+	"info": {
+		"_postman_id": "fc20cf45-5640-4c84-b800-ae3c3b05675b",
+		"name": "Smart Examiner",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12244203"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Signup [Teacher]",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"detail\": 1,\r\n    \"firstName\": \"TEACHER\",\r\n    \"lastName\": \"Doe\",\r\n    \"userName\": \"mjrrdn@gmail30.com\",\r\n    \"display_name\": \"TEACHER03\",\r\n    \"password\": \"1234\",\r\n    \"role\": \"TEACHER\",\r\n    \"status\": \"PENDING\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/signup",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup [Student]",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"userName\": \"mjrrdn@gmail111.com\",\r\n    \"display_name\": \"ridwanmonjur\",\r\n    \"password\": \"1234\",\r\n    \"role\": \"STUDENT\",\r\n    \"status\": \"PENDING\",\r\n    \"roll_number\": 45,\r\n    \"teacher_id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/signup",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup [Student] [Error Transaction]",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"detail\": 1,\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"userName\": \"mjrrdn@gmail100.com\",\r\n    \"display_name\": \"ridwanmonjur\",\r\n    \"password\": \"1234\",\r\n    \"role\": \"STUDENT\",\r\n    \"status\": \"PENDING\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/signup",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup [PARENT]",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"detail\": 1,\r\n    \"firstName\": \"PARENT\",\r\n    \"lastName\": \"PARENT\",\r\n    \"userName\": \"mjrrdn@gmail20.com\",\r\n    \"display_name\": \"PARENT\",\r\n    \"password\": \"1234\",\r\n    \"role\": \"PARENT\",\r\n    \"status\": \"PENDING\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/signup",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup [BACKOFFICEUPLOADER]",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"detail\": 1,\r\n    \"firstName\": \"BACKOFFICEUPLOADER\",\r\n    \"lastName\": \"BACKOFFICEUPLOADER\",\r\n    \"userName\": \"mjrrdn@rocket.com\",\r\n    \"display_name\": \"BACKOFFICEUPLOADER\",\r\n    \"password\": \"1234\",\r\n    \"role\": \"BACKOFFICEUPLOADER\",\r\n    \"status\": \"PENDING\",\r\n    \"teacher_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/signupBackoffice",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"signupBackoffice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup [BACKOFFICEUPLOADER] [Error Transaction] Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"detail\": 1,\r\n    \"firstName\": \"BACKOFFICEUPLOADER\",\r\n    \"lastName\": \"BACKOFFICEUPLOADER\",\r\n    \"userName\": \"mjrrdn@gmail15.com\",\r\n    \"display_name\": \"BACKOFFICEUPLOADER\",\r\n    \"password\": \"1234\",\r\n    \"role\": \"BACKOFFICEUPLOADER\",\r\n    \"status\": \"PENDING\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/signupBackoffice",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"signupBackoffice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup [BACKOFFICEREVIEWER]",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"detail\": 1,\r\n    \"firstName\": \"BACKOFFICEREVIEWER\",\r\n    \"lastName\": \"BACKOFFICEREVIEWER\",\r\n    \"userName\": \"mjrrdn@gmail10.com\",\r\n    \"display_name\": \"BACKOFFICEREVIEWER\",\r\n    \"password\": \"1234\",\r\n    \"role\": \"BACKOFFICEREVIEWER\",\r\n    \"status\": \"PENDING\",\r\n    \"teacher_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/signupBackoffice",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"signupBackoffice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup [BACKOFFICEREVIEWER] [Error Transaction]",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"detail\": 1,\r\n    \"firstName\": \"BACKOFFICEREVIEWER\",\r\n    \"lastName\": \"BACKOFFICEREVIEWER\",\r\n    \"userName\": \"mjrrdn@gmail10.com\",\r\n    \"display_name\": \"BACKOFFICEREVIEWER\",\r\n    \"password\": \"1234\",\r\n    \"role\": \"BACKOFFICEREVIEWER\",\r\n    \"status\": \"PENDING\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/signupBackoffice",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"signupBackoffice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login [Student]",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"mjrrdn@gmail100.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login [Parent]",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"mjrrdn@gmail20.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login [Teacher]",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"mjrrdnteacher@gmail02.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login [Teacher] [Incorrect Role]",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"mjrrdnadmin@gmail01.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login [Admin]",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"admin@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/loginAdmin",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"loginAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Admin [Incorrect Role]",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"mjrrdnteacher@gmail02.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/loginAdmin",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"loginAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login [BackOfficeReviewer]",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"mjrrdn@gmail10.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/loginBackoffice",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"loginBackoffice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login [BackOfficeUploader]",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"mjrrdn@gmail07.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/loginBackoffice",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"loginBackoffice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login [BackOfficeUploader] [Error[",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"mjrrdn@gmail111.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/loginBackoffice",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"loginBackoffice"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Question",
+			"item": [
+				{
+					"name": "Add question [Admin Creds Accessed}",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminJWT}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": {\r\n        \"topic_id\": 1,\r\n        \"subject_id\": 1,\r\n        \"exam_id\" : 1,\r\n        \"text\": \"This is the question text...\",\r\n        \"imageUrl\": \"new url\",\r\n        \"uploaderId\": 78, \r\n        \"reviewerId\": 85, \r\n        \"difficulty\": 4,\r\n        \"comment\": \"\",\r\n        \"status\": \"ACCEPTED\"\r\n    },\r\n    \"options\": [\r\n        {\r\n            \"key\": \"A\",\r\n            \"value\": \"This is Option A\", \r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n            \"key\": \"B\",\r\n            \"value\": \"This is Option B\",\r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n            \"key\": \"C\",\r\n            \"value\": \"This is Option C\",\r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n            \"key\": \"D\",\r\n            \"value\": \"This is Option D\",\r\n            \"type\": \"TEXT\"\r\n        }\r\n    ],\r\n    \"explanation\": {\r\n        \"text\": \"This is the explanation text...\",\r\n        \"videoUrl\": \"This is the video url\",\r\n        \"imageUrl\": \"This is the image url\",\r\n        \"correctAnswer\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/question",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"question"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add question [No creds Denied]",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": {\r\n        \"topic_id\": 1,\r\n        \"subject_id\": 1,\r\n        \"exam_id\" : 1,\r\n        \"text\": \"This is the question text...\",\r\n        \"imageUrl\": \"new url\",\r\n        \"uploaderId\": 78, \r\n        \"reviewerId\": 85, \r\n        \"difficulty\": 4,\r\n        \"comment\": \"\",\r\n        \"status\": \"ACCEPTED\"\r\n    },\r\n    \"options\": [\r\n        {\r\n            \"key\": \"A\",\r\n            \"value\": \"This is Option A\", \r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n            \"key\": \"B\",\r\n            \"value\": \"This is Option B\",\r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n            \"key\": \"C\",\r\n            \"value\": \"This is Option C\",\r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n            \"key\": \"D\",\r\n            \"value\": \"This is Option D\",\r\n            \"type\": \"TEXT\"\r\n        }\r\n    ],\r\n    \"explanation\": {\r\n        \"text\": \"This is the explanation text...\",\r\n        \"videoUrl\": \"This is the video url\",\r\n        \"imageUrl\": \"This is the image url\",\r\n        \"correctAnswer\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/question",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"question"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add question [Teacher Creds Denied]",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{teacherJWT}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": {\r\n        \"topic_id\": 1,\r\n        \"subject_id\": 1,\r\n        \"exam_id\" : 1,\r\n        \"text\": \"This is the question text...\",\r\n        \"imageUrl\": \"new url\",\r\n        \"uploaderId\": 78, \r\n        \"reviewerId\": 85, \r\n        \"difficulty\": 4,\r\n        \"comment\": \"\",\r\n        \"status\": \"ACCEPTED\"\r\n    },\r\n    \"options\": [\r\n        {\r\n            \"key\": \"A\",\r\n            \"value\": \"This is Option A\", \r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n            \"key\": \"B\",\r\n            \"value\": \"This is Option B\",\r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n            \"key\": \"C\",\r\n            \"value\": \"This is Option C\",\r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n            \"key\": \"D\",\r\n            \"value\": \"This is Option D\",\r\n            \"type\": \"TEXT\"\r\n        }\r\n    ],\r\n    \"explanation\": {\r\n        \"text\": \"This is the explanation text...\",\r\n        \"videoUrl\": \"This is the video url\",\r\n        \"imageUrl\": \"This is the image url\",\r\n        \"correctAnswer\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/question",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"question"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit question [No Creds Denied]",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": {\r\n        \"id\": 325,\r\n        \"topic_id\": 1,\r\n        \"subject_id\": 1,\r\n        \"exam_id\" : 1,\r\n        \"text\": \"This is the question text 50...\",\r\n        \"imageUrl\": \"new url\",\r\n        \"uploaderId\": 78, \r\n        \"reviewerId\": 85, \r\n        \"difficulty\": 4,\r\n        \"status\": \"ACCEPTED\",\r\n        \"comment\": \"\"\r\n    },\r\n    \"options\": [\r\n        {\r\n             \"id\": 326,\r\n            \"key\": \"A\",\r\n            \"value\": \"This is Option A 50\", \r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n             \"id\": 327,\r\n            \"key\": \"B\",\r\n            \"value\": \"This is Option B 50\",\r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n             \"id\": 328,\r\n            \"key\": \"C\",\r\n            \"value\": \"This is Option C 50\",\r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n             \"id\": 329,\r\n            \"key\": \"D\",\r\n            \"value\": \"This is Option D 50\",\r\n            \"type\": \"TEXT\"\r\n        }\r\n    ],\r\n    \"explanation\": {\r\n        \"id\": 330,\r\n        \"text\": \"This is the explanation text 50...\",\r\n        \"videoUrl\": \"This is the video url 50\",\r\n        \"imageUrl\": \"This is the image url 50\",\r\n        \"correctAnswer\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}0/api/v1/question",
+							"host": [
+								"{{baseUrl}}0"
+							],
+							"path": [
+								"api",
+								"v1",
+								"question"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit question [Teacher Creds Accessed]",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{teacherJWT}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": {\r\n        \"id\": 325,\r\n        \"topic_id\": 1,\r\n        \"subject_id\": 1,\r\n        \"exam_id\" : 1,\r\n        \"text\": \"This is the question text 50...\",\r\n        \"imageUrl\": \"new url\",\r\n        \"uploaderId\": 78, \r\n        \"reviewerId\": 85, \r\n        \"difficulty\": 4,\r\n        \"status\": \"ACCEPTED\",\r\n        \"comment\": \"\"\r\n    },\r\n    \"options\": [\r\n        {\r\n             \"id\": 326,\r\n            \"key\": \"A\",\r\n            \"value\": \"This is Option A 50\", \r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n             \"id\": 327,\r\n            \"key\": \"B\",\r\n            \"value\": \"This is Option B 50\",\r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n             \"id\": 328,\r\n            \"key\": \"C\",\r\n            \"value\": \"This is Option C 50\",\r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n             \"id\": 329,\r\n            \"key\": \"D\",\r\n            \"value\": \"This is Option D 50\",\r\n            \"type\": \"TEXT\"\r\n        }\r\n    ],\r\n    \"explanation\": {\r\n        \"id\": 330,\r\n        \"text\": \"This is the explanation text 50...\",\r\n        \"videoUrl\": \"This is the video url 50\",\r\n        \"imageUrl\": \"This is the image url 50\",\r\n        \"correctAnswer\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/question",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"question"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit question [Admin Creds Accessed]",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminJWT}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": {\r\n        \"id\": 325,\r\n        \"topic_id\": 1,\r\n        \"subject_id\": 1,\r\n        \"exam_id\" : 1,\r\n        \"text\": \"This is the question text 50...\",\r\n        \"imageUrl\": \"new url\",\r\n        \"uploaderId\": 78, \r\n        \"reviewerId\": 85, \r\n        \"difficulty\": 4,\r\n        \"status\": \"ACCEPTED\",\r\n        \"comment\": \"\"\r\n    },\r\n    \"options\": [\r\n        {\r\n             \"id\": 326,\r\n            \"key\": \"A\",\r\n            \"value\": \"This is Option A 50\", \r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n             \"id\": 327,\r\n            \"key\": \"B\",\r\n            \"value\": \"This is Option B 50\",\r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n             \"id\": 328,\r\n            \"key\": \"C\",\r\n            \"value\": \"This is Option C 50\",\r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n             \"id\": 329,\r\n            \"key\": \"D\",\r\n            \"value\": \"This is Option D 50\",\r\n            \"type\": \"TEXT\"\r\n        }\r\n    ],\r\n    \"explanation\": {\r\n        \"id\": 330,\r\n        \"text\": \"This is the explanation text 50...\",\r\n        \"videoUrl\": \"This is the video url 50\",\r\n        \"imageUrl\": \"This is the image url 50\",\r\n        \"correctAnswer\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/question",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"question"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit question Status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"status\": \"REJECTED\",\r\n        \"comment\": \"Bad spelling\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/question/198/status",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"question",
+								"198",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit question [Options Error]",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{teacherJWT}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": {\r\n        \"id\": 198,\r\n        \"topic_id\": 1,\r\n        \"subject_id\": 1,\r\n        \"exam_id\" : 1,\r\n        \"text\": \"This is the question text 50...\",\r\n        \"imageUrl\": \"new url\",\r\n        \"uploaderId\": 78, \r\n        \"reviewerId\": 85, \r\n        \"difficulty\": 4,\r\n        \"status\": \"ACCEPTED\",\r\n        \"comment\": \"\"\r\n    },\r\n    \"options\": [\r\n        {\r\n            \"key\": \"A\",\r\n            \"value\": \"This is Option A 50\", \r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n            \"key\": \"B\",\r\n            \"value\": \"This is Option B 50\",\r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n            \"key\": \"C\",\r\n            \"value\": \"This is Option C 50\",\r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n            \"key\": \"D\",\r\n            \"value\": \"This is Option D 50\",\r\n            \"type\": \"TEXT\"\r\n        }\r\n    ],\r\n    \"explanation\": {\r\n        \"id\": 203,\r\n        \"text\": \"This is the explanation text 50...\",\r\n        \"videoUrl\": \"This is the video url 50\",\r\n        \"imageUrl\": \"This is the image url 50\",\r\n        \"correctAnswer\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/question",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"question"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit question [Explanation Error]",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{teacherJWT}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": {\r\n        \"id\": 198,\r\n        \"topic_id\": 1,\r\n        \"subject_id\": 1,\r\n        \"exam_id\" : 1,\r\n        \"text\": \"This is the question text 50...\",\r\n        \"imageUrl\": \"new url\",\r\n        \"uploaderId\": 78, \r\n        \"reviewerId\": 85, \r\n        \"difficulty\": 4,\r\n        \"status\": \"ACCEPTED\",\r\n        \"comment\": \"\"\r\n    },\r\n    \"options\": [\r\n        {\r\n             \"id\": 199,\r\n            \"key\": \"A\",\r\n            \"value\": \"This is Option A 50\", \r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n             \"id\": 200,\r\n            \"key\": \"B\",\r\n            \"value\": \"This is Option B 50\",\r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n             \"id\": 201,\r\n            \"key\": \"C\",\r\n            \"value\": \"This is Option C 50\",\r\n            \"type\": \"TEXT\"\r\n        },\r\n        {\r\n             \"id\": 202,\r\n            \"key\": \"D\",\r\n            \"value\": \"This is Option D 50\",\r\n            \"type\": \"TEXT\"\r\n        }\r\n    ],\r\n    \"explanation\": {\r\n        \"text\": \"This is the explanation text 50...\",\r\n        \"videoUrl\": \"This is the video url 50\",\r\n        \"imageUrl\": \"This is the image url 50\",\r\n        \"correctAnswer\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/question",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"question"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Question [Admin Creds Denied]",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminJWT}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/question/313",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"question",
+								"313"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Question [No Creds Denied}",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/question/313",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"question",
+								"313"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Question [Teacher Creds Accessed]",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{teacherJWT}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/question/313",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"question",
+								"313"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Explanation By Many Question Ids",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ids\": [\r\n        313,\r\n        204,\r\n        210\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/question/explanation/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"question",
+								"explanation",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Question",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/question/192",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"question",
+								"192"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Options",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/question/options/181",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"question",
+								"options",
+								"181"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Explanation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/question/explanation/167",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"question",
+								"explanation",
+								"167"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exam",
+			"item": [
+				{
+					"name": "Get Subject By Exam Id and Teacher Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/exam/1/teacher/1/subject",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"exam",
+								"1",
+								"teacher",
+								"1",
+								"subject"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Exam",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/exam/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"exam",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Topic By Subject Id And Teacher Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/exam/subject/8881/exam/1/topic",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"exam",
+								"subject",
+								"8881",
+								"exam",
+								"1",
+								"topic"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Drive",
+			"item": [
+				{
+					"name": "Get all files",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/drive/credential",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"drive",
+								"credential"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Say Hi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "adminJWT",
+			"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOjEsImZpcnN0TmFtZSI6IkpvaG4iLCJsYXN0TmFtZSI6IkRvZSIsInJvbGUiOiJBRE1JTiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIn0.q15lgd2ri9plrPoCS5Au90cp-7o9qa2r_DoPBnMLpLZ-gLjEBAe6j7_4nXtRUJscAoN8rLKKEztAp48QWerKuA"
+		},
+		{
+			"key": "teacherJWT",
+			"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOjIsImZpcnN0TmFtZSI6IlNtYXJ0IiwibGFzdE5hbWUiOiJFeGFtaW5lciIsInJvbGUiOiJURUFDSEVSIiwiZW1haWwiOiJtanJyZG50ZWFjaGVyQGdtYWlsMDIuY29tIn0.ZFx8ahFgLJDzGN_ygF0z6LQtnlJg-MEL5SeTNAa_MjTCdOQYWjKrYLf5vaMB727usehQC4crTKIlBGjizUGaqw",
+			"type": "string"
+		}
+	]
+}

@@ -1,0 +1,31 @@
+
+/* Base styles for the grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  grid-gap: 20px;
+}
+
+/* Media Query for Small Laptop Screens (3 columns) */
+@media screen and (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Media Query for Tablets (2 columns with padding) */
+@media screen and (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+  }
+}
+
+/* Media Query for Mobile (1 column with padding) */
+@media screen and (max-width: 480px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+}

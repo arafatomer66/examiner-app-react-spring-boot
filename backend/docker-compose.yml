@@ -1,0 +1,64 @@
+version: "3.9"
+services:
+  frontend-dev:
+    tty: true
+    image: frontend-dev
+    build: 
+      context: ./../k53-smart-examiner-frontend-react
+      args:
+        - REACT_APP_NAME=naim
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./../k53-smart-examiner-frontend-react:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    networks:
+      - frontend-network
+    depends_on:
+      - backend-dev
+
+  backend-dev: 
+    tty: true
+    image: spring-api
+    build: 
+      context: ./
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./src:/api-app/src
+      - ./target:/api-app/target
+      - ./tokens:/api-app/tokens
+    command: sh ./docker-entrypoint.sh
+    ports:
+      - "8081:8081"
+      - "35729:35729"
+      - "5005:5005"
+    restart: always
+    networks:
+      - backend-network
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:13
+    container_name: k53_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: smartexaminer2
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - backend-network
+
+networks:
+  backend-network:
+    driver: bridge
+  frontend-network:
+  
+volumes:
+  postgres_data:
